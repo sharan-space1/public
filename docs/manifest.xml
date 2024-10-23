@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+    <Id>3d21db18-c7f7-4723-ba35-ae912d467773</Id>
+    <Version>1.0.0.0</Version>
+    <ProviderName>AsInt</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <DisplayName DefaultValue="EXP AsInt Data Conduit" />
+    <Description DefaultValue="AsInt Data Conduit" />
+    <IconUrl DefaultValue="https://images.squarespace-cdn.com/content/58d2d3291b10e3219f0bac01/1534780726269-63D4YW7GSE6WG4AX1NAE/AsInt_small-transparent.png?content-type=image%2Fpng" />
+    <SupportUrl DefaultValue="https://asint.net/products-services" />
+    <AppDomains>
+        <AppDomain>https://asint-asset-manager-apm-02-asint-asint-ais-dataconduit-addin.cfapps.us10-001.hana.ondemand.com</AppDomain>
+        <!-- AsInt Logon Identity Provider -->
+        <AppDomain>https://aewxagoqs.accounts.ondemand.com</AppDomain>
+        <AppDomain>https://accounts.sap.com</AppDomain>
+        <AppDomain>https://asint.net</AppDomain>
+        <!-- APM-02 Data Conduit -->
+        <AppDomain>https://asint-asset-manager-apm-02-asint-dc-asint-ais-approuter.cfapps.us10-001.hana.ondemand.com</AppDomain>
+        <AppDomain>https://apm-02-asint.authentication.us10.hana.ondemand.com</AppDomain>
+		<AppDomain>http://localhost:5000</AppDomain>
+    </AppDomains>
+    <Hosts>
+        <Host Name="Workbook" />
+    </Hosts>
+    <DefaultSettings>
+        <SourceLocation DefaultValue="https://asint-asset-manager-apm-02-asint-asint-ais-dataconduit-addin.cfapps.us10-001.hana.ondemand.com/comasintdataconduitaddin/index.html" />
+    </DefaultSettings>
+    <Permissions>ReadWriteDocument</Permissions>
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+        <Hosts>
+            <Host xsi:type="Workbook">
+                <DesktopFormFactor>
+                    <GetStarted>
+                        <Title resid="asint.GetStarted.Title" />
+                        <Description resid="asint.GetStarted.Description" />
+                        <LearnMoreUrl resid="asint.GetStarted.LearnMoreUrl" />
+                    </GetStarted>
+                    <FunctionFile resid="asint.DesktopFunctionFile.Url" />
+                    <ExtensionPoint xsi:type="PrimaryCommandSurface">
+                        <CustomTab id="asint.Tab1">
+                            <Group id="asint.Tab1.Group1">
+                                <Label resid="asint.Group1Label" />
+                                <Icon>
+									<bt:Image size="16" resid="asint.tpngicon_16x16" />
+                                    <bt:Image size="32" resid="asint.tpngicon_32x32" />
+                                    <bt:Image size="80" resid="asint.tpngicon_80x80" />
+                                </Icon>
+                                <Control xsi:type="Button" id="asint.TaskpaneButton.ng">
+                                    <Label resid="asint.TaskpaneButton.ng.Label" />
+                                    <Supertip>
+                                        <Title resid="asint.TaskpaneButton.ng.Label" />
+                                        <Description resid="asint.TaskpaneButton.ng.Tooltip" />
+                                    </Supertip>
+                                    <Icon>
+                                        <bt:Image size="16" resid="asint.tpngicon_16x16" />
+                                        <bt:Image size="32" resid="asint.tpngicon_32x32" />
+                                        <bt:Image size="80" resid="asint.tpngicon_80x80" />
+                                    </Icon>
+                                    <Action xsi:type="ShowTaskpane">
+                                        <TaskpaneId>Button2Id1</TaskpaneId>
+                                        <SourceLocation resid="asint.TaskpaneNextGen.Url" />
+                                    </Action>
+                                </Control>
+                            </Group>
+                            <Label resid="asint.TaskpaneTab.Label" />
+                        </CustomTab>
+                    </ExtensionPoint>
+                </DesktopFormFactor>
+            </Host>
+        </Hosts>
+        <Resources>
+            <bt:Images>
+                <bt:Image id="asint.tpngicon_16x16" DefaultValue="https://asint-asset-manager-apm-02-asint-asint-ais-dataconduit-addin.cfapps.us10-001.hana.ondemand.com/comasintdataconduitaddin/assets/asint_logo_80_x_80.png" />
+                <bt:Image id="asint.tpngicon_32x32" DefaultValue="https://asint-asset-manager-apm-02-asint-asint-ais-dataconduit-addin.cfapps.us10-001.hana.ondemand.com/comasintdataconduitaddin/assets/asint_logo_80_x_80.png" />
+                <bt:Image id="asint.tpngicon_80x80" DefaultValue="https://asint-asset-manager-apm-02-asint-asint-ais-dataconduit-addin.cfapps.us10-001.hana.ondemand.com/comasintdataconduitaddin/assets/asint_logo_80_x_80.png" />
+            </bt:Images>
+            <bt:Urls>
+                <bt:Url id="asint.DesktopFunctionFile.Url" DefaultValue="https://asint-asset-manager-apm-02-asint-asint-ais-dataconduit-addin.cfapps.us10-001.hana.ondemand.com/comasintdataconduitaddin/utils/FunctionFile.html" />
+                <bt:Url id="asint.TaskpaneNextGen.Url" DefaultValue="https://asint-asset-manager-apm-02-asint-asint-ais-dataconduit-addin.cfapps.us10-001.hana.ondemand.com/comasintdataconduitaddin/index.html" />
+                <bt:Url id="asint.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
+            </bt:Urls>
+            <bt:ShortStrings>
+                <bt:String id="asint.TaskpaneButton.cg.Label" DefaultValue="AsInt Data Conduit" />
+                <bt:String id="asint.TaskpaneButton.ng.Label" DefaultValue="AsInt Data Conduit" />
+                <bt:String id="asint.TaskpaneTab.Label" DefaultValue="AsInt" />
+                <bt:String id="asint.Group1Label" DefaultValue="AsInt, Inc" />
+                <bt:String id="asint.GetStarted.Title" DefaultValue="Get started with your AsInt Data Conduit!" />
+            </bt:ShortStrings>
+            <bt:LongStrings>
+                <bt:String id="asint.TaskpaneButton.cg.Tooltip" DefaultValue="Click to Show a AsInt Data Conduit" />
+                <bt:String id="asint.TaskpaneButton.ng.Tooltip" DefaultValue="Click to Show a AsInt Data Conduit" />
+                <bt:String id="asint.GetStarted.Description" DefaultValue="AsInt Data Conduit loaded successfully!" />
+            </bt:LongStrings>
+        </Resources>
+    </VersionOverrides>
+</OfficeApp>
